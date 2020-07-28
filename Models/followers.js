@@ -1,17 +1,23 @@
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var sequelize = require("../config/connection.js");
-
-var followers = sequelize.define("Followers", {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    primaryKey: true
-  },
-  handle: Sequelize.STRING,
-  info: Sequelize.STRING,
-});
-
-followers.sync();
-
-module.exports = followers;
+module.exports = function(sequelize, DataTypes) {
+  var Post = sequelize.define("Post", {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    category: {
+      type: DataTypes.STRING,
+      defaultValue: "Personal"
+    }
+  });
+  return Post;
+};

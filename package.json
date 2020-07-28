@@ -1,28 +1,28 @@
 {
-  "name": "twitchfollowers",
+  "name": "twitch-crud",
   "version": "1.0.0",
-  "description": "twitch follower info",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
+  },
+  "description": "Simple program for twitch streamers to store details about their followers.",
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dodgen92/twitchfollowers.git"
   },
-  "author": "T Remington Dodgen",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dodgen92/twitchfollowers/issues"
   },
-  "homepage": "https://github.com/dodgen92/twitchfollowers#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "mysql2": "^2.1.0",
-    "pg": "^8.3.0",
-    "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.3"
-  }
+  "homepage": "https://github.com/dodgen92/twitchfollowers#readme"
 }
